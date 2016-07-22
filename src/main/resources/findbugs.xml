@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FindbugsPlugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="findbugsplugin.xsd"
+                pluginid="DEMO.findbugs.plugin"
+                defaultenabled="true"
+                provider="DEMO"
+                website="http://soal.org/">
+
+    <Detector class="com.mars.findbugs.ThreadBugDetector" speed="fast" reports="THREAD_RUN_BUG"/>
+    <Detector class="com.mars.findbugs.RunnableBugDetector" speed="fast" reports="RUNNABLE_IN_SELF_THREAD_BUG"/>
+
+    <BugPattern type="THREAD_RUN_BUG" abbrev="RUN_DEMO" category="BAD_PRACTICE"/>
+    <BugPattern type="RUNNABLE_IN_SELF_THREAD_BUG" abbrev="THREAD_DEMO" category="BAD_PRACTICE"/>
+
+</FindbugsPlugin>
